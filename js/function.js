@@ -1,4 +1,4 @@
-function armstr()
+function NumAms()
 {
 var arm=0,a,b,c,d,num;
 num=Number(document.getElementById("no_input").value);
