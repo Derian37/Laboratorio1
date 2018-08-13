@@ -1,3 +1,4 @@
+
 function armstr()
 {
 var arm=0,a,b,c,d,num;
@@ -18,4 +19,8 @@ else
 {
 alert("No es un numero de Armstrong");
 }
+}
+
+function personas(){
+	var person = {nombre: "Pepito", apellido1: "Navajas", apellido2: "Afiladas"};
 }
