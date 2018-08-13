@@ -19,12 +19,20 @@ document.getElementById("res").value ="No es un Numero de Armstromg";
 
 function personas(){
 	var person = '{"personitas" :[' + 
-	'{ "id": "117373743", "nombre" : "Pepito", "telefono" : "89383838" },' +
-	'{ "id": "565656465", "nombre" : "Maria", "telefono" : "89384543" },' +
-	'{ "id": "754435435", "nombre" : "Juan", "telefono" : "86564545" }]}';
+	'{ "id": "1", "nombre" : "Pepito", "telefono" : "89383838" },' +
+	'{ "id": "2", "nombre" : "Maria", "telefono" : "89384543" },' +
+	'{ "id": "3", "nombre" : "Juan", "telefono" : "86564545" }]}';
 
 	obj = JSON.parse(person);
-	document.getElementById("tabladatos").innerHTML = obj.personitas[1].id + " " + 
-														obj.personitas[1].nombre + " " +
-														obj.personitas[1].telefono;
+	for (var i = 0; i < 3; i++) {
+		//for (var j = 0; j < 3; j++) {
+
+			document.getElementById("col1").innerHTML+= obj.personitas[i].id + "<br>";
+			document.getElementById("col2").innerHTML+= obj.personitas[i].nombre + "<br>";
+			document.getElementById("col3").innerHTML+= obj.personitas[i].telefono + "<br>";
+
+			
+		//}
+	}
+	
 }
