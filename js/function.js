@@ -1,4 +1,4 @@
-
+<!doctype html>
 function armstr()
 {
 var arm=0,a,b,c,d,num;
