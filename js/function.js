@@ -18,5 +18,13 @@ document.getElementById("res").value ="No es un Numero de Armstromg";
 }
 
 function personas(){
-	var person = {nombre: "Pepito", apellido1: "Navajas", apellido2: "Afiladas"};
+	var person = '{"personitas" :[' + 
+	'{ "id": "117373743", "nombre" : "Pepito", "telefono" : "89383838" },' +
+	'{ "id": "565656465", "nombre" : "Maria", "telefono" : "89384543" },' +
+	'{ "id": "754435435", "nombre" : "Juan", "telefono" : "86564545" }]}';
+
+	obj = JSON.parse(person);
+	document.getElementById("tabladatos").innerHTML = obj.personitas[1].id + " " + 
+														obj.personitas[1].nombre + " " +
+														obj.personitas[1].telefono;
 }
