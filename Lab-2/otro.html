@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proyecto Progra Web</title>
+ 
+        <meta charset='utf-8'>
+        <meta name="keywords" content="Network, HTML5, PHP, MySQL, jquery" />
+        <meta name="language" content="es" />
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="curriculum.css">
+    </head>
+ 
+    <body>
+        <div id="pagina"> 
+            <div id="contenido">
+                <br>
+                <!--SECCION MENU-->
+                <nav id="menu">
+                    <ul>
+                        <li><a href="inicio.php" title="INICIO">Inicio</a></li>
+                        <li><a href="perfil.php" title="PERFIL">Mi Perfil</a></li>
+                        <li><a href="curriculum.php" title="CURRICULUM">Mi Curriculum</a></li>
+                        <li><a href="categoria.php" title="CURRICULUM">Suscripciones</a></li>
+                        <li><a href="favoritos.php" title="CURRICULUM">Empleos Favoritos</a></li>
+                        <li><a href="contacto.php" title="CONTACTO">Contacto</a></li>
+                    </ul>
+                </nav>
+ 
+                <section id="principal">
+                    <section id="titulo">
+                        <div>
+                            <h2><?php echo $fila[0];
+                                      
+                             
+                             ?></h2>
+                        </div>
+                    </section>
+                 
+                    <section id="detalle">
+                        <form name="frm_agregar_todo" id="frm_agregar_todo" method="post" action="" enctype="multipart/form-data">
+                        <label id="paso1">Paso1: Ingrese su informacion personal</label><br> <br>
+                        <div id="div_agregarCurriculom" class="divs">
+                            <div id="informacion_personal">
+                            <label id="label">Información Personal </label><br> <br>
+                        <form name="frm_agregar_curriculum" id="frm_agregar_curriculum" method="post" action="" enctype="multipart/form-data">
+                             
+                            <label>Cedula: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="1" id="txt_cedula" name="txt_cedula"> 
+                            <br>
+                            <label>Nombre: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese su Nombre completo" maxlength="128" value="" tabindex="2" id="txt_nombre" name="txt_nombre" > 
+                            <br>
+                            <label>Apellido: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese sus Apelldos o Apellido" maxlength="64" value="" tabindex="3" id="txt_apellido" name="txt_apellido"> 
+                            <br>
+                             <label>Fecha de Nacimiento: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese su Fecha de Nacimiento" maxlength="10" value="" tabindex="4" id="txt_fechaNacimiento" name="txt_fechaNacimiento" > 
+                            <br>
+                             <label>Direccion: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese su Direccion" maxlength="10" value="" tabindex="5" id="txt_direccion" name="txt_direccion" > 
+                            <br>
+                             <label>Correo Electronico: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese su Correo Electronico" maxlength="10" value="" tabindex="6" id="txt_correo" name="txt_correo" > 
+                            <br>
+                             <label>Numero de telefono Casa / Oficina: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese un Numero de telefonom Casa / Oficina" maxlength="10" value="" tabindex="7" id="txt_telefono" name="txt_telefono"> 
+                            <br>
+                             <label>Numero de telefono Celular: </label>
+                            <input type="text" class="cajatexto" placeholder="Ingrese un Numero de telefono Celular" maxlength="10" value="" tabindex="8" id="txt_celular" name="txt_celular"> 
+                            <br>
+                             <label>Fotografía:</label>
+                            <input type="file" id="fotocu" name="fotocu" tabindex="9"> 
+                            <div id="personal_information"><img src="app_core/resources/images/personal.png" width="70"></div>
+                            <br><br>
+                            <input type="submit" class="boton" value="Guardar Información" id="btn_guardarcv" name="btn_guardarcv" tabindex="22">
+                            </form>
+                            </div>
+                            <label id="paso2">Paso2: Ingrese una experiencia o varias si asi lo fuera</label><br> <br>
+                            <div id="experiencia_laboral">
+                                <form name="frm_agregar_Experiencia" id="frm_agregar_Experiencia" method="post" action="" enctype="multipart/form-data">
+                                <div id="div_Curriculom_Experiencia" class="divs"> <label id="label">Experiencia Laboral </label>
+                                <br> 
+                                    <label >Nombre de Empresa: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="10" id="txt_Empresa" name="txt_Empresa"> 
+                                    <br>
+                                    <label>Nombre de Puesto Desempeñado: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="11" id="txt_Puesto" name="txt_Puesto">  
+                                    <br> 
+                                    <label>Fecha en que Inicio: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese su Nombre completo" maxlength="128" value="" tabindex="12" id="txt_fechainicio" name="txt_fechainicio">
+                                    <br> 
+                                    <label>Fecha en que Finalizo: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese sus Apelldos o Apellido" maxlength="64" value="" tabindex="13" id="txt_fechafinal" name="txt_fechafinal">
+                                    <div id="academic_training"><img src="app_core/resources/images/experiencia.png" width="70"></div>
+                                    <input type="submit" class="boton" value="Añadir Experiencia" id="btn_añadir_experiencia" name="btn_añadir_experiencia" tabindex="22">
+                                </div> 
+                                </form>
+                                </div>
+                                <label id="paso3">Paso3: Ingrese su formacion academica o varias si las tiene</label><br> <br>
+                                <div id="formacion_academica">
+                                <form name="frm_agregar_Formacion" id="frm_agregar_Formacion" method="post" action="" enctype="multipart/form-data">
+                                <div id="div_Curriculom_FormacionAcademica" class="divs"> <label id="label">Formacion Academica </label>
+                                <br> <br>
+                                    <label>Nombre de la Institución: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="14" id="txt_institución" name="txt_institución"> 
+                                    <br>
+                                    <label>Año en que Inicio: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese sus Apelldos o Apellido" maxlength="64" value="" tabindex="15" id="txt_annoInicio" name="txt_annoInicio"> 
+                                    <br>
+                                    <label>Año en que Finalizo: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese sus Apelldos o Apellido" maxlength="64" value="" tabindex="16" id="txt_annoFin" name="txt_annoFin"> 
+                                    <br>
+                                    <label>Especialidad en que se desempeña: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="17" id="txt_especialidad" name="txt_especialidad">
+                                    <br> 
+                                    <label>Titulo Obtenido: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese su Nombre completo" maxlength="128" value="" tabindex="18" id="txt_titulo" name="txt_titulo"> 
+                                    <div id="academic_training"><img src="app_core/resources/images/formacion.png" width="70"></div> 
+                                    <input type="submit" class="boton" value="Añadir Formacion" id="btn_añadir_formacion" name="btn_añadir_formacion" tabindex="22">
+                                </div> 
+                                </form>
+                                </div>
+                                <br> <br>
+                                <label id="paso4">Paso4: Ingrese meritos (si los tiene)</label><br> <br>
+                                <div id="meritos">
+                                <form name="frm_agregar_Formacion" id="frm_agregar_Formacion" method="post" action="" enctype="multipart/form-data">
+                                <div id="div_Curriculom_MeritosCandidato" class="divs"> <label id="label">Meritos o Logros </label>
+                                    <br>
+                                    <label>Nombre de Logro: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="19" id="txt_logro" name="txt_logro"> 
+                                    <br>
+                                    <label>Detalle del logro: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese un numero de Cedula" maxlength="10" value="" tabindex="20" id="txt_detalle" name="txt_detalle"> 
+                                    <br> 
+                                    <label>Calificacion (si posee) de logro: </label>
+                                    <input type="text" class="cajatexto" placeholder="Ingrese su Nombre completo" maxlength="128" value="" tabindex="21" id="txt_calificacion" name="txt_calificacion"> 
+                                    <div id="academic_training"><img src="app_core/resources/images/merito.png" width="70"></div> 
+                                    <input type="submit" class="boton" value="Añadir Merito" id="btn_añadir_merito" name="btn_añadir_merito" tabindex="22">
+                                </div> 
+                                </form>
+                                </div>
+                                <br> 
+                             
+                            <input type="submit" class="curriculum_opciones" value="Modificar CV" id="btn_modificarcv" name="btn_modificarcv" tabindex="23">
+                            <input type="button" class="curriculum_opciones" value="Limpiar" id="btn_limpiar" name="btn_limpiar" tabindex="25">
+                            </form>
+ 
+                         
+                    </div>
+                    </section>
+                </section>    
+            <section id='creditos_curriculum'>
+                <footer>
+                    <p> Web creada por Jiandro Sibaja Granados, Marlon Angulo Segura y Derian Chavarria. &copy;2017</p>
+                    <div id="redes1"><a title="Los Tejos" href="https://www.facebook.com/activa.discomovil.CR.PZ/?fref=ts"><img src="app_core/resources/thumbnails/Facebook.png" width="30" " /></a>
+                    <div id="redes2"> <img src="app_core/resources/thumbnails/Instagram.png" width="30"></div>
+                    <div id="redes3"> <img src="app_core/resources/thumbnails/Twitter.png" width="30"></div>
+                </footer>
+            </section>
+        </div>
+    </body>
+</html>
