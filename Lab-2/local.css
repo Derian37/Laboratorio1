@@ -241,16 +241,17 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
         }
 
 .social ul{
-	list-style: none;
+	list-style:none;
 }
 
 .social ul li a{
 	display:block;
-	color: #fff;
+	color: #fff;2
 	background: #000;
 	padding: 10px 20px;
 	text-decoration: none;
 	border-radius: 8px;
+    width: 60px;
 }
 
 .social ul li a:hover{
@@ -269,4 +270,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .social .icon-instagram{
 	background: #BD3381
+}
+.icon-office{
+	background: #3AB54A;
 }

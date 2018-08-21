@@ -39,3 +39,9 @@
 .icon-twitch:before {
   content: "\ea9f";
 }
+.icon-office:before {
+  content: "\1f3ed";
+}
+.icon-mail:before {
+  content: "\1f310";
+}
